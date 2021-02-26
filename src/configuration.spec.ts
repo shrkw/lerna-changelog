@@ -7,7 +7,7 @@ import ConfigurationError from "./configuration-error";
 
 describe("Configuration", function() {
   describe("fromPath", function() {
-    const tmpDir = `${os.tmpDir()}/changelog-test`;
+    const tmpDir = `${os.tmpdir()}/changelog-test`;
 
     beforeEach(function() {
       fs.ensureDirSync(tmpDir);
@@ -65,6 +65,7 @@ describe("Configuration", function() {
       ["https://github.com/babel/ember-cli-babel", "babel/ember-cli-babel"],
       ["https://github.com/babel/ember-cli-babel.git", "babel/ember-cli-babel"],
       ["git@github.com:babel/ember-cli-babel.git", "babel/ember-cli-babel"],
+      ["https://github.com/emberjs/ember.js.git", "emberjs/ember.js"],
       ["https://gitlab.com/gnachman/iterm2.git", undefined],
       ["git@gitlab.com:gnachman/iterm2.git", undefined],
     ];

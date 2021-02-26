@@ -61,10 +61,14 @@ export default class GithubAPI {
         Authorization: `token ${this.auth}`,
       },
     });
-    return res.json();
+    const parsedResponse = await res.json();
+    if (res.ok) {
+      return parsedResponse;
+    }
+    throw new ConfigurationError(`Fetch error: ${res.statusText}.\n${JSON.stringify(parsedResponse)}`);
   }
 
   private getAuthToken(): string {
-    return process.env.GITHUB_AUTH;
+    return process.env.GITHUB_AUTH || "";
   }
 }

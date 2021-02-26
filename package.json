@@ -1,6 +1,6 @@
 {
   "name": "lerna-changelog",
-  "version": "0.8.2",
+  "version": "1.0.1",
   "description": "Generate a changelog for a lerna monorepo",
   "keywords": [
     "changelog",
@@ -21,44 +21,45 @@
     "url": "git+https://github.com/lerna/lerna-changelog.git"
   },
   "scripts": {
-    "build": "npm run clean && tsc",
+    "build": "yarn clean && tsc",
     "changelog": "node ./bin/cli.js",
     "clean": "rimraf lib",
-    "fix": "npm run lint -- --fix",
-    "lint": "tslint --project . --format stylish",
-    "prepublish": "npm run build",
+    "fix": "yarn lint -- --fix",
+    "lint": "eslint src --ext ts --format stylish",
+    "prepublish": "yarn build",
     "prettier": "prettier --write 'src/**/*.ts'",
     "test": "jest",
-    "test-ci": "npm run build && jest",
-    "watch": "npm run build -- --watch"
+    "test-ci": "yarn build && yarn test",
+    "watch": "yarn build -- --watch"
   },
   "dependencies": {
     "chalk": "^2.4.1",
-    "cli-highlight": "^1.2.3",
-    "execa": "^0.10.0",
-    "make-fetch-happen": "^4.0.1",
-    "normalize-git-url": "^3.0.2",
-    "p-map": "^1.2.0",
+    "cli-highlight": "^2.1.4",
+    "execa": "^1.0.0",
+    "hosted-git-info": "^3.0.4",
+    "make-fetch-happen": "^7.1.1",
+    "p-map": "^3.0.0",
     "progress": "^2.0.0",
-    "string.prototype.padend": "^3.0.0",
-    "yargs": "^11.0.0"
+    "yargs": "^13.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^23.1.0",
-    "@types/node": "^7.0.22",
-    "fs-extra": "^6.0.1",
-    "jest": "^23.1.0",
-    "jest-runner-tslint": "^1.0.5",
-    "prettier": "1.13.5",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^22.4.6",
-    "tslint": "^5.10.0",
-    "tslint-config-prettier": "^1.13.0",
-    "tslint-plugin-prettier": "^1.3.0",
-    "typescript": "^2.9.2"
+    "@types/jest": "^25.2.3",
+    "@types/node": "^13.13.4",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "fs-extra": "^8.1.0",
+    "jest": "^25.5.4",
+    "jest-runner-eslint": "^0.7.6",
+    "prettier": "1.19.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.5.1",
+    "typescript": "^3.9.2"
   },
   "engines": {
-    "node": ">=6"
+    "node": "10.* || >= 12"
   },
   "changelog": {
     "repo": "lerna/lerna-changelog",
@@ -78,21 +79,11 @@
         "roots": [
           "src"
         ],
-        "transform": {
-          "^.+\\.jsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
-          "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-        },
-        "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-        "moduleFileExtensions": [
-          "ts",
-          "tsx",
-          "js",
-          "json"
-        ]
+        "preset": "ts-jest"
       },
       {
-        "runner": "jest-runner-tslint",
         "displayName": "lint",
+        "runner": "jest-runner-eslint",
         "moduleFileExtensions": [
           "ts"
         ],

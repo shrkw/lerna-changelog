@@ -1,5 +1,67 @@
 # Changelog
 
+## v1.0.1 (2020-03-04)
+
+#### :bug: Bug Fix
+* [#259](https://github.com/lerna/lerna-changelog/pull/259) Allow `;` characters in merge commit messages ([@tuchk4](https://github.com/tuchk4))
+
+#### :house: Internal
+* [#260](https://github.com/lerna/lerna-changelog/pull/260) Remove `os.tmpDir` deprecation warning ([@tuchk4](https://github.com/tuchk4))
+
+#### Committers: 2
+- Valerii Sorokobatko ([@tuchk4](https://github.com/tuchk4))
+
+
+## v1.0.0 (2019-12-16)
+
+#### :boom: Breaking Change
+* [#198](https://github.com/lerna/lerna-changelog/pull/198) Drop support for Node 8 ([@Turbo87](https://github.com/Turbo87))
+* [#160](https://github.com/lerna/lerna-changelog/pull/160) Drop support for Node 6 ([@Turbo87](https://github.com/Turbo87))
+
+#### :rocket: Enhancement
+* [#153](https://github.com/lerna/lerna-changelog/pull/153) enhancement: Update string renderer to add empty lines only when commits are present.  ([@shrikanthkr](https://github.com/shrikanthkr))
+* [#158](https://github.com/lerna/lerna-changelog/pull/158) Upgrade `yargs` to v13 ([@dcyriller](https://github.com/dcyriller))
+
+#### :bug: Bug Fix
+* [#189](https://github.com/lerna/lerna-changelog/pull/189) Abort process when github response is not OK ([@emmenko](https://github.com/emmenko))
+
+#### :house: Internal
+* [#147](https://github.com/lerna/lerna-changelog/pull/147) Switch from TSLint to ESLint ([@trivikr](https://github.com/trivikr))
+* [#161](https://github.com/lerna/lerna-changelog/pull/161) CI: Add Node.js 12 to the test matrix ([@trivikr](https://github.com/trivikr))
+* [#159](https://github.com/lerna/lerna-changelog/pull/159) Adjust `.npmignore` file ([@Turbo87](https://github.com/Turbo87))
+
+#### Committers: 5
+- Cyrille David ([@dcyriller](https://github.com/dcyriller))
+- Nicola Molinari ([@emmenko](https://github.com/emmenko))
+- Shrikanth ([@shrikanthkr](https://github.com/shrikanthkr))
+- Tobias Bieniek ([@Turbo87](https://github.com/Turbo87))
+- Trivikram Kamat ([@trivikr](https://github.com/trivikr))
+
+
+## v0.8.3 (2019-11-11)
+
+#### :rocket: Enhancement
+* [#142](https://github.com/lerna/lerna-changelog/pull/142) Upgrade `make-fetch-happen` to v5.0.0 ([@trivikr](https://github.com/trivikr))
+
+#### :bug: Bug Fix
+* [#155](https://github.com/lerna/lerna-changelog/pull/155) Fix incorrect repo parsing for project names with `.` characters ([@shrikanthkr](https://github.com/shrikanthkr))
+
+#### :house: Internal
+* [#151](https://github.com/lerna/lerna-changelog/pull/151) Add dependabot config ([@Turbo87](https://github.com/Turbo87))
+* [#149](https://github.com/lerna/lerna-changelog/pull/149) Update locked dependencies ([@trivikr](https://github.com/trivikr))
+* [#146](https://github.com/lerna/lerna-changelog/pull/146) Update `jest` to v24.x ([@trivikr](https://github.com/trivikr))
+* [#143](https://github.com/lerna/lerna-changelog/pull/143) Upgrade `p-map` to v2.1.0 ([@trivikr](https://github.com/trivikr))
+* [#144](https://github.com/lerna/lerna-changelog/pull/144) Remove unused `string.prototype.padend` dependency ([@trivikr](https://github.com/trivikr))
+* [#137](https://github.com/lerna/lerna-changelog/pull/137) Update `execa` to v1.0.0 ([@trivikr](https://github.com/trivikr))
+* [#139](https://github.com/lerna/lerna-changelog/pull/139) Upgrade `typescript` to v3.6.3 ([@trivikr](https://github.com/trivikr))
+* [#127](https://github.com/lerna/lerna-changelog/pull/127) TravisCI: Remove deprecated `sudo: false` option ([@Turbo87](https://github.com/Turbo87))
+
+#### Committers: 3
+- Shrikanth ([@shrikanthkr](https://github.com/shrikanthkr))
+- Tobias Bieniek ([@Turbo87](https://github.com/Turbo87))
+- Trivikram Kamat ([@trivikr](https://github.com/trivikr))
+
+
 ## v0.8.2 (2018-10-14)
 
 #### :bug: Bug Fix
