@@ -1,5 +1,5 @@
 {
-  "name": "lerna-changelog",
+  "name": "@shrkw/lerna-changelog",
   "version": "1.0.1",
   "description": "Generate a changelog for a lerna monorepo",
   "keywords": [
@@ -18,7 +18,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lerna/lerna-changelog.git"
+    "url": "git://github.com/shrkw/lerna-changelog.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "build": "yarn clean && tsc",
